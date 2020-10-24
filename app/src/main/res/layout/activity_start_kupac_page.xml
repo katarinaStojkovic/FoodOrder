@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StartPageKupacActivity">
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.cs330.pz_katarina_stojkovic.NavigationFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:translationZ="20dp"/>
+
+    <ScrollView
+        android:id="@+id/scrollViewPorudzbinaList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#00FFFFFF"
+        android:translationZ="10dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:divider="@drawable/horizontal_divider"
+            android:dividerPadding="12dip"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="#00FFFFFF"
+                android:gravity="center"
+                android:text="FOOD ORDER"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/spinnerRestoranStart"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <Spinner
+                android:id="@+id/spinnerJeloPoRestoranu"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <EditText
+                android:id="@+id/datumIsporukeFld"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date"
+                android:text="datum isporuke" />
+
+            <EditText
+                android:id="@+id/vremeIsporukeFld"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="time"
+                android:text="vreme isporuke" />
+
+            <EditText
+                android:id="@+id/adresaIsporukeFld"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="adresa isporuke" />
+
+            <EditText
+                android:id="@+id/kolicinaFld"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:text="kolicina" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Poruči" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

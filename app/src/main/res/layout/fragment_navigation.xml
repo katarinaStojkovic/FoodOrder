@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NavigationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/FoodOrder"
+            android:layout_width="317dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="36sp"
+            android:textStyle="bold|italic"
+            android:text="Food Order" />
+
+        <ImageButton
+            android:id="@+id/btnDrawer"
+            android:layout_width="64dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/hamburgermenu"
+            android:contentDescription="@string/app_name" />
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="326dp"
+        android:layout_height="678dp"
+        android:visibility="gone"
+        android:background="@android:color/holo_orange_dark">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/horizontal_divider"
+            android:dividerPadding="12dip"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <Button
+                android:id="@+id/viewPorudzbineBtn"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Porudbine" />
+            <Button
+                android:id="@+id/viewPorudzbineVlasnikBtn"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Porudbine" />
+            <Button
+                android:id="@+id/cratePorudzbinaBtn"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Kreiranje porudbine" />
+
+            <Button
+                android:id="@+id/viewJelaBtn"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Jela" />
+
+            <Button
+                android:id="@+id/logoutBtn"
+                android:drawableTint="@color/common_google_signin_btn_text_light_pressed"
+                android:drawableLeft="@android:drawable/ic_menu_set_as"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logout" />
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+
+</FrameLayout>
